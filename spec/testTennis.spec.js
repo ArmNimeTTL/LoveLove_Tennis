@@ -22,6 +22,9 @@ function Tennis(){
     else if(ScoreA === 30 && ScoreB === 0) return 'Thirty - Love';
     else if(ScoreA === 40 && ScoreB === 0) return 'Forty - Love';
   }
+  this.winner = function(){
+    if(ScoreA === 40) return 'Player A is Winner';
+  }
 }
 
 describe('Tennis game' , function() {
@@ -41,5 +44,8 @@ describe('Tennis game' , function() {
   it('should echo "Forty - Love" when Player A get score 40',function(){
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Forty - Love');
+  })
+  it('should echo "player A is Winner" when Player A get score 40',function(){
+    
   })
 });
