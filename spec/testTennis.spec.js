@@ -17,7 +17,7 @@ function Tennis(){
   };
 
   this.echo = function(){
-    if(ScoreA===0 && ScoreB ===0) return 'Love-Love';
+    if(ScoreA===0 && ScoreB ===0) return 'Love - Love';
   }
 }
 
