@@ -17,14 +17,18 @@ function Tennis(){
   };
 
   this.echo = function(){
-    if(ScoreA===0 && ScoreB ===0) return 'Love - Love';
+    if(ScoreA === 0 && ScoreB === 0) return 'Love - Love';
+    else if(ScoreA === 15 && ScoreB === 0) return 'Fifteen - Love';
   }
 }
 
 describe('Tennis game' , function() {
+  var tennis = new Tennis();
   it('should echo "Love - Love" when start the game',function(){
-    var tennis = new Tennis();
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
   });
+  it('should echo "Fifteen - Love" when Player A get score',function(){
+    
+  })
 });
