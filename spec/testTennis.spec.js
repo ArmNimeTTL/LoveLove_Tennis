@@ -34,6 +34,7 @@ describe('Tennis game' , function() {
     expect(tennis.echo()).toEqual('Fifteen - Love');
   });
   it('should echo "Thirty - Love" when Player A ger score 30',function(){
-
+    tennis.GetScoreA();
+    expect(tennis.echo()).toEqual('Thirty - Love');
   })
 });
