@@ -19,6 +19,7 @@ function Tennis(){
   this.echo = function(){
     if(ScoreA === 0 && ScoreB === 0) return 'Love - Love';
     else if(ScoreA === 15 && ScoreB === 0) return 'Fifteen - Love';
+    else if(ScoreA === 30 && ScoreB === 0) return 'Thirty - Love';
   }
 }
 
@@ -28,8 +29,11 @@ describe('Tennis game' , function() {
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
   });
-  it('should echo "Fifteen - Love" when Player A get score',function(){
+  it('should echo "Fifteen - Love" when Player A get score 15',function(){
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Fifteen - Love');
   });
+  it('should echo "Thirty - Love" when Player A ger score 30',function(){
+
+  })
 });
