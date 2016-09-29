@@ -28,6 +28,8 @@ function Tennis(){
     else if(ScoreA === 0 && ScoreB === 15) return 'Love - Fifteen';
     else if(ScoreA === 0 && ScoreB === 30) return 'Love - Thirty';
     else if(ScoreA === 0 && ScoreB === 40) return 'Love - Forty';
+    else if(ScoreA === 40) return 'Player A is Winner';
+
   }
 
   /*this.echoB = function(){
@@ -80,4 +82,7 @@ describe('Tennis game' , function() {
     tennis.GetScoreB();
     expect(tennis.echo()).toEqual('Love - Forty');
   });
+  it('should echo "player B is Winner" when Player B get score 40',function(){
+    tennis.GetScoreB();
+  })
 });
