@@ -103,7 +103,8 @@ describe('Tennis game' , function() {
     expect(tennis.echo()).toEqual('Thirty - Fifteen');
   })
   it('should echo "Thirty - Thirty" when Player B get score',function(){
-    
+    tennis.GetScoreB();
+    expect(tennis.echo()).toEqual('Thirty - Thirty');
   });
 
 });
