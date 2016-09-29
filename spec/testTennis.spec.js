@@ -106,5 +106,8 @@ describe('Tennis game' , function() {
     tennis.GetScoreB();
     expect(tennis.echo()).toEqual('Thirty - Thirty');
   });
+  it('should echo "Forty - Thirty" when Player A get score',function(){
+    
+  });
 
 });
