@@ -8,19 +8,13 @@ function Tennis(){
       if(ScoreA === 0) { ScoreA = 15; return 'Player A get Score!!'; }
       else if(ScoreA === 15) { ScoreA = 30; return 'Player A get Score!!'; }
       else if(ScoreA === 30) { ScoreA = 40; return 'Player A get Score!!'; }
-      else if(ScoreA === 40){
-        ScoreA = 0;
-        return 'Player A won';
-      }
+      else if(ScoreA === 40){ ScoreA = 0; return 'Player A won'; }
     }
     this.GetScoreB = function(){
       if(ScoreB === 0) { ScoreB = 15; return 'Player B get Score!!'; }
       else if(ScoreB === 15) { ScoreB = 30; return 'Player B get Score!!'; }
       else if(ScoreB === 30) { ScoreB = 40; return 'Player B get Score!!'; }
-      else if(ScoreB === 40){
-        ScoreB = 0;
-        return 'Player B is won';
-      }
+      else if(ScoreB === 40){ ScoreB = 0; return 'Player B is won'; }
     }
   };
   this.echo = function(){
