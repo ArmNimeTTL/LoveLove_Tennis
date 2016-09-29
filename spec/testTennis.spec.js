@@ -10,13 +10,17 @@ function Tennis(){
       else if(ScoreA === 30) ScoreA = 40;
       else if(ScoreA === 40){
         ScoreA = 0;
-        return 'Player A is Winner';
+        return 'Player A won';
       }
     }
     this.GetScoreB = function(){
       if(ScoreB === 0) ScoreB = 15;
       else if(ScoreB === 15) ScoreB = 30;
       else if(ScoreB === 30) ScoreB = 40;
+      else if(ScoreB === 40){
+        ScoreB = 0;
+        return 'Player B is won';
+      }
     }
   };
 
@@ -28,9 +32,7 @@ function Tennis(){
     else if(ScoreA === 0 && ScoreB === 15) return 'Love - Fifteen';
     else if(ScoreA === 0 && ScoreB === 30) return 'Love - Thirty';
     else if(ScoreA === 0 && ScoreB === 40) return 'Love - Forty';
-    else if(ScoreA === 40) return 'Player A is Winner';
-
-  }
+    }
 
   /*this.echoB = function(){
     if(ScoreB === 15 && ScoreA === 0) return 'Love - Fifteen';
@@ -65,7 +67,7 @@ describe('Tennis game' , function() {
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Forty - Love');
   })
-  it('should echo "player A is Winner" when Player A get score 40',function(){
+  it('should echo "player A won" when Player A get score 40',function(){
     tennis.GetScoreA();
     //expect(tennis.winner()).toEqual('player A is Winner');
   })
@@ -82,7 +84,7 @@ describe('Tennis game' , function() {
     tennis.GetScoreB();
     expect(tennis.echo()).toEqual('Love - Forty');
   });
-  it('should echo "player B is Winner" when Player B get score 40',function(){
+  it('should echo "player B won" when Player B get score 40',function(){
     tennis.GetScoreB();
   })
 });
