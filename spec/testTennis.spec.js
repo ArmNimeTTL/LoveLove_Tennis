@@ -98,9 +98,12 @@ describe('Tennis game' , function() {
     tennis.GetScoreB();
     expect(tennis.echo()).toEqual('Fifteen - Fifteen');
   });
-  it('should echo "Thirty - Fifteen" when PLayer B get score',function(){
+  it('should echo "Thirty - Fifteen" when PLayer A get score',function(){
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Thirty - Fifteen');
   })
+  it('should echo "Thirty - Thirty" when Player B get score',function(){
+    
+  });
 
 });
