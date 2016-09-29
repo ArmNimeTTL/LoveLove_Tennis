@@ -14,7 +14,7 @@ function Tennis(){
       if(ScoreB === 0) { ScoreB = 15; return 'Player B get Score!!'; }
       else if(ScoreB === 15) { ScoreB = 30; return 'Player B get Score!!'; }
       else if(ScoreB === 30) { ScoreB = 40; return 'Player B get Score!!'; }
-      else if(ScoreB === 40){ ScoreB = 0; return 'Player B is won'; }
+      else if(ScoreB === 40){ ScoreB = 0; return 'Player B won'; }
     }
   };
   this.echo = function(){
