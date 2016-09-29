@@ -26,13 +26,15 @@ function Tennis(){
 
   this.echo = function(){
     if(ScoreA === 0 && ScoreB === 0) return 'Love - Love';
+    else if(ScoreA === 15 && ScoreB ===15) return 'Fifteen - Fifteen';
+    else if(ScoreA === 30 && ScoreB === 30) return 'Thirty - Thirty';
     else if(ScoreA === 15 && ScoreB === 0) return 'Fifteen - Love';
     else if(ScoreA === 30 && ScoreB === 0) return 'Thirty - Love';
     else if(ScoreA === 40 && ScoreB === 0) return 'Forty - Love';
     else if(ScoreA === 0 && ScoreB === 15) return 'Love - Fifteen';
     else if(ScoreA === 0 && ScoreB === 30) return 'Love - Thirty';
     else if(ScoreA === 0 && ScoreB === 40) return 'Love - Forty';
-    }
+  };
 
   /*this.echoB = function(){
     if(ScoreB === 15 && ScoreA === 0) return 'Love - Fifteen';
@@ -48,13 +50,11 @@ function Tennis(){
 
 describe('Tennis game' , function() {
   var tennis = new Tennis();
-
+  //--------------------------- Player A -------------------------------------//
   it('should echo "Love - Love" when start the game',function(){
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
   });
-
-  //--------------------------- Player A -------------------------------------//
   it('should echo "Fifteen - Love" when Player A get score 15',function(){
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Fifteen - Love');
@@ -62,16 +62,20 @@ describe('Tennis game' , function() {
   it('should echo "Thirty - Love" when Player A get score 30',function(){
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Thirty - Love');
-  })
+  });
   it('should echo "Forty - Love" when Player A get score 40',function(){
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Forty - Love');
-  })
+  });
   it('should echo "player A won" when Player A get score 40',function(){
     tennis.GetScoreA();
     //expect(tennis.winner()).toEqual('player A is Winner');
-  })
+  });
   //--------------------------- Player B -------------------------------------//
+  it('should echo "Love - Love" when start the game',function(){
+    tennis.start();
+    expect(tennis.echo()).toEqual('Love - Love');
+  });
   it('should echo "Love - Fifteen" when Player B get score 15',function(){
     tennis.GetScoreB();
     expect(tennis.echo()).toEqual('Love - Fifteen');
@@ -86,5 +90,19 @@ describe('Tennis game' , function() {
   });
   it('should echo "player B won" when Player B get score 40',function(){
     tennis.GetScoreB();
-  })
+  });
+  //--------------------------------------------------------------------------//
+  it('should echo "Love - Love" when start the game',function(){
+    tennis.start();
+    expect(tennis.echo()).toEqual('Love - Love');
+  });
+  /*it('should echo "Fifteen - Love" when Player A get score 15',function(){
+    tennis.GetScoreA();
+    expect(tennis.echo()).toEqual('Fifteen - Love');
+  });*/
+  it('should echo "Fifteen - Fifteen" when Player B get score 15',function(){
+    tennis.GetScoreB();
+    tennis.GetScoreA();
+    expect(tennis.echo()).toEqual('Fifteen - Fifteen');
+  });
 });
