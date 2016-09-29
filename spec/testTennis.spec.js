@@ -63,7 +63,6 @@ describe('Tennis game' , function() {
   });
   it('should echo "player A won" when Player A get score 40',function(){
     tennis.GetScoreA();
-    //expect(tennis.winner()).toEqual('player A is Winner');
   });
   //--------------------------- Player B -------------------------------------//
   it('should echo "Love - Love" when start the game',function(){
@@ -109,6 +108,9 @@ describe('Tennis game' , function() {
   it('should echo "Forty - Thirty" when Player A get score',function(){
     tennis.GetScoreA();
     expect(tennis.echo()).toEqual('Forty - Thirty');
+  });
+  it('should echo "player A won" when Player A get score 40',function(){
+    tennis.GetScoreA();
   });
 
 });
